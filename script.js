@@ -7,7 +7,7 @@
 //
 //  Complete each section below by following the STEP comments.
 // ============================================
-
+ 
 
 // ============================================
 //  WARM-UP: Favorite Colors
@@ -17,15 +17,16 @@
 // STEP 1: Create an array called "colors" with exactly
 //         three strings: "red", "green", "blue"
 //         Use let to declare it.
-
+let colors = ["red", "green", "blue"]
 // STEP 2: Use a for loop to print each color.
 //         Each line should say exactly:
 //         "Color: red"
 //         "Color: green"
 //         "Color: blue"
 //         Use: console.log("Color: " + colors[i])
-
-
+for (let i = 0; i < colors.length; i++) {
+    console.log("Color: " + colors[i]);
+}
 // ============================================
 //  MAIN: Number Analyzer
 // ============================================
@@ -69,3 +70,68 @@
 //         Start with the first number as the largest.
 //         Loop through the rest and update if you find a bigger one.
 //         Print: console.log("Largest: " + largest)
+// WARM-UP: Favorite Colors
+let colors = ["red", "green", "blue"];
+
+for (let i = 0; i < colors.length; i++) {
+    console.log("Color: " + colors[i]);
+}
+
+// MAIN: Number Analyzer
+
+// STEP 3–4: Collect five numbers
+let numbers = [];
+
+for (let i = 0; i < 5; i++) {
+    let input = prompt("Enter number " + (i + 1));
+    let number = parseFloat(input);
+    numbers.push(number);
+}
+
+// STEP 5: Print all numbers
+let numberString = "";
+
+for (let i = 0; i < numbers.length; i++) {
+    numberString += numbers[i];
+
+    if (i < numbers.length - 1) {
+        numberString += ", ";
+    }
+}
+
+console.log("Numbers: " + numberString);
+
+// STEP 6: Calculate the sum
+let sum = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+}
+
+console.log("Sum: " + sum);
+
+// STEP 7: Calculate the average
+let average = sum / numbers.length;
+console.log("Average: " + average);
+
+// STEP 8: Count the even numbers
+let count = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+        count++;
+    }
+}
+
+console.log("Even count: " + count);
+
+// STEP 9: Find the largest number
+let largest = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > largest) {
+        largest = numbers[i];
+    }
+}
+
+console.log("Largest: " + largest);
